@@ -296,6 +296,7 @@ class _xyz(ctypes.Structure):
 		("y", ctypes.c_float),
 		("z", ctypes.c_float),
 	]
+xyz = _xyz
 
 
 class k4a_float3_t(ctypes.Union):
@@ -315,7 +316,6 @@ class k4a_imu_sample_t(ctypes.Structure):
 	]
 
 IMU_SAMPLE_SIZE = ctypes.sizeof(k4a_imu_sample_t)
-
 
 K4A_DEVICE_DEFAULT = 0
 K4A_WAIT_INFINITE = -1
